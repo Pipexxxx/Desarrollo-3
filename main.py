@@ -54,10 +54,10 @@ class OverweightPackage(Package):
             return super().calculate()
 
 class Person:
-    def __init__(self, name: str, address: str, phone: str):
+    def __init__(self, name: str, address: str, number: str):
         self._name = name
         self._address = address
-        self._phone = phone
+        self._number = number
         
     @property
     def name(self) -> str:
@@ -68,13 +68,13 @@ class Person:
         return self._address
     
     @property
-    def phone(self) -> str:
-        return self._phone
+    def number(self) -> str:
+        return self._number
 
 
 class Contact(Person):
-    def __init__(self, name: str, address: str, phone: str, email: str):
-        super().__init__(name, address, phone)
+    def __init__(self, name: str, address: str, number: str, email: str):
+        super().__init__(name, address, number)
         self._email = email
         
     @property
